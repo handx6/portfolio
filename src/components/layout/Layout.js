@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 export default function Layout({ children }) {
   return (
-    <div className="scroll-smooth">
+    <div className="scroll-smooth bg-white">
         <Navigation/>
         <main>{children}</main>
         <Footer />

@@ -1,6 +1,6 @@
 import { FiGithub, FiLinkedin, FiGlobe } from "react-icons/fi";
 
-import FooterCopyright from "./AppFooterCopyright";
+import FooterCopyright from "./FooterCopyright";
 
 const socialLinks = [
   {
@@ -20,10 +20,10 @@ const socialLinks = [
   },
 ];
 
-export default function Footer (){
+export default function Footer() {
   return (
     <div className="p-4 sm:p-8 lg:px-20 xl:px-24 2xl:px-32 sm:mx-auto bg-white">
-      <div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
+      <div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-[#F7F8FC]">
         {/* Footer social links */}
         <div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
           <p className="text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-5">
@@ -42,10 +42,8 @@ export default function Footer (){
             ))}
           </ul>
         </div>
-
-        <AppFooterCopyright />
+        <FooterCopyright />
       </div>
     </div>
   );
-};
-
+}
