@@ -4,7 +4,6 @@ import Layout from '@/components/layout/Layout';
 
 
 export default function About({projects}) {
-  console.log(projects);
   return (
     <Layout>
       <main className="bg-white text-black">

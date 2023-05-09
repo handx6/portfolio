@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 
 export default function CardProjectPreview({ title, category, urlImg, slug }) {
   return (
     <div>
-      <Link href={`posts/${slug}`}>
+      <Link href={`projects/${slug}`}>
         <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
           <div>
             <img
