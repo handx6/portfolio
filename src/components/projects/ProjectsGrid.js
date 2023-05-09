@@ -21,9 +21,11 @@ export default function ProjectsGrid({ projects }) {
   // Select projects by project category
   const selectProjectsByCategory = projects.filter((item) => {
     let category = item.fields.category.toLowerCase();
+    if (selectProjects === "All") {
+      return item
+    }
     return category.includes(selectProjects.toLowerCase());
   });
-  console.log(selectProjects);
   return (
     <section className="py-5 sm:py-10 mt-5 sm:mt-10">
       <div className="text-center">
@@ -46,11 +48,10 @@ export default function ProjectsGrid({ projects }) {
         <div className="flex justify-between border-b border-[#F7F8FC] pb-3 gap-3">
           <ProjectSearch setSearchProject={setSearchProjects} />
           <ProjectCategorySelect setSelectProject={setSelectProjects} selectedProject={selectProjects}/>
-          {/* <ProjectsFilter setSelectProject={setSelectProject} /> */}
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-        {selectProjects
+        {selectProjects !== "All" && selectProjects
           ? selectProjectsByCategory.map((project) => (
               <CardProjectPreview
                 title={project.fields.title}

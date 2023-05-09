@@ -8,7 +8,7 @@ import ProjectsGrid from '@/components/projects/ProjectsGrid';
 export default function Home({projects}) {
   return (
     <Layout>
-      <main className="bg-white text-black p-4 sm:p-8 lg:px-20 xl:px-32 2xl:px-32 sm:mx-auto ">
+      <main className="bg-white  p-4 sm:p-8 lg:px-20 xl:px-32 sm:mx-auto">
         <Hero />
         <ProjectsGrid projects={projects}/>
       </main>
