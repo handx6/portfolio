@@ -3,12 +3,12 @@ import { createClient } from "contentful";
 import Layout from '@/components/layout/Layout';
 
 
-export default function Home({projects}) {
+export default function About({projects}) {
   console.log(projects);
   return (
     <Layout>
       <main className="bg-white text-black">
-        <h1>home</h1>
+        <h1>about</h1>
       </main>
     </Layout>
   );
